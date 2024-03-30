@@ -1,7 +1,7 @@
 
 # AirForceProud95 Quotes Discord Bot
 NOTE: This an official AFP95 bot. This bot is fan-made. <br>
-NOTE 2:The bot was half-created using ChatGPT 3.5 to test how GPT is doing
+
 
 ## Introduction
 Welcome to the AirForceProud95 Quote Discord Bot! This bot is designed to provide quotes from the famous AirForceProud95. Use this bot to uplift and inspire your Discord community.
