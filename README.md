@@ -15,7 +15,7 @@ Welcome to the AirForceProud95 Quote Discord Bot! This bot is designed to provid
 1. Download Node.js from the website and install it
 2. Start config by opening a Command Prompt in the code's location.
 3. Type `npm i` to install required dependencies
-4. Make a bot at [Discord Developers]([link/to/your/bot/invitation](https://discord.com/developers/applications)).
+4. Make a bot at [Discord Developers](https://discord.com/developers/applications)).
 5. Invite the bot to your Server
 6. Make a file named: `.env` and put this in it `DISCORD_TOKEN=""`
 7. Paste bot token between the quotes in the `.env` file
