@@ -23,6 +23,7 @@ Welcome to the AirForceProud95 Quote Discord Bot! This bot is designed to provid
 9. You are done! Start using the bot by using the `/quote` command
 ## Commands
 - `/quote`: Get a random inspirational quote from AirForceProud95.
+- Thats it for now.
 
 ## Configuration
 Use the bot file `index.js`, scroll down to the quotes , and edit them to your liking.
