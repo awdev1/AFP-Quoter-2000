@@ -37,12 +37,21 @@ const quotes = [
   "V1... rotaté",
   "Rodger dodger chief",
   "Welcome to FSX Steam edition",
-
   "Hey What's up everyone Weird Florida man here",
   "Aircraft- nObOdY dO aNyThInG \nAFP- YES EVERYONE PAUSE YOUR SIMULATORS SO THIS ONE GUY CAN FIGURE OUT HIS NAME",
   "CAPTAIN WE´RE FLYING WITH NO ENGINES, WHATS THE PLAN \nIT'S WAFFLE NIGHT",
   "AFP- Oscar Oscar... foxtrot?\n Aircraft-DONT QUESTION IT JUST GO WITH IT\n AFP- duh-WELL IM GOING TO QUESTION A CALLSIGN THAT OOF OKAY? \nSO DONT CHECK IN AS OOF AND EXPECT THERE TO BE NO REPERCUSSIONS",
-  "I SEE THE CURVATURE OF THE EARTH OUT THE WINDOW"
+  "I SEE THE CURVATURE OF THE EARTH OUT THE WINDOW",
+  "hey p master can you unpause bro? or is that g master- sorry g master ive got [redacted] on the mind",
+  "we just put down 2 f18s and the cessna guy couldnt do it\nin my defence the guy that stole my cockpit killed my engine...\nTHAT SHOULD'VE HELPED YOU",
+  "this is ryanair-\nyoo ryanair calling up for clearance on a carrier?",
+  "we can shoot him down if you'd like?\nthat's a NEGATIVE GET YOUR HANDS OFF OF AIR CHINA\n[air china screaming]",
+  "please let me use the rest room im going to shit myself\nnein. remain seated.",
+  "we have 219 souls on board as well as 7 gingers, but they were not counted as they do not have souls",
+  "BOE23HVY ready for takeoff\nGOOOOOOOOOOOOOOOO"
+
+
+
 ];
 
 const commands = [
@@ -89,11 +98,11 @@ client.on("interactionCreate", async (interaction) => {
     await interaction.reply({
       embeds: [
         {
-          title: "AirForceProud95 Quotes",
+          title: "AirForceProud95 Quote:",
           description: '"'+randomQuote+'"',
           color: 0x3498db,
           footer: {
-            text: "Developed by ChatGPT as a Stress Test with too much human interaction",
+            text: "Developed by ChatGPT as a Stress Test with too much human interaction 💀",
             icon_url:
               "https://yt3.googleusercontent.com/ytc/AIf8zZSlLc93SjTAF7g1NsvVsHLSIqk4VOMJ6LHHPTUtWw=s176-c-k-c0x00ffffff-no-rj",
           },
