@@ -37,12 +37,28 @@ const quotes = [
   "V1... rotaté",
   "Rodger dodger chief",
   "Welcome to FSX Steam edition",
-
+  "HOLD ON TO THAT EMERGENCY DOOR. LET'S SEE IF IT WILL FLY OFF",
   "Hey What's up everyone Weird Florida man here",
   "Aircraft- nObOdY dO aNyThInG \nAFP- YES EVERYONE PAUSE YOUR SIMULATORS SO THIS ONE GUY CAN FIGURE OUT HIS NAME",
   "CAPTAIN WE´RE FLYING WITH NO ENGINES, WHATS THE PLAN \nIT'S WAFFLE NIGHT",
   "AFP- Oscar Oscar... foxtrot?\n Aircraft-DONT QUESTION IT JUST GO WITH IT\n AFP- duh-WELL IM GOING TO QUESTION A CALLSIGN THAT OOF OKAY? \nSO DONT CHECK IN AS OOF AND EXPECT THERE TO BE NO REPERCUSSIONS",
-  "I SEE THE CURVATURE OF THE EARTH OUT THE WINDOW"
+  "I SEE THE CURVATURE OF THE EARTH OUT THE WINDOW",
+  "DAL724 I DIDN'T MEAN EXIT ON TO THE SNOW BANK THERE",
+  "Frequency change approved, take care. Love you say it back\nLOVE YOU, SAY IT BACK\n bYe-Bye",
+  "AS-BO... \nkay uhh I'm gonna assume you're flying msfs and that is the default selcal shown in most aircrafts.. uhh I believe we already have someone over the ocean using that selcal, wanna try a new one?",
+  "Hey what's up guys Weird Florida Man here, merch is available at the link in the description just dropped some new stuff so if you're interested you can check it out. If not I'll just buy the entire inventory myself and leave it at my neighbours front door even though she said she'd call the cops if I did that again.."
+];
+
+const footer = [
+ "Thanks Beani",
+ "Thanks Beani for helping",
+ "You got this",
+ "You matter in this world",
+ "Don't Give Up.",
+ "Everyone Matters.",
+ "If you need help than get help.",
+ "Thanks for using this bot",
+ "Contact my dev for suggesting more quotes"
 ];
 
 const commands = [
@@ -51,12 +67,12 @@ const commands = [
     .setDescription("Get a random AirForceProud95 quote"),
 ].map((command) => command.toJSON());
 
-const rest = new REST({ version: "9" }).setToken(process.env.DISCORD_TOKEN);
+const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
 
 client.once("ready", async () => {
   console.log(`Logged in as ${client.user.tag}`);
   const activities = [
-    { name: "Airforceproud95 quotes", type: "WATCHING" },
+    { name: "AirForceProud95 quotes", type: "WATCHING" },
 
   ];
 
@@ -82,39 +98,42 @@ client.on("interactionCreate", async (interaction) => {
   const { commandName } = interaction;
 
   if (commandName === "quote") {
+    try {
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      const randomFooter = footer[Math.floor(Math.random() * footer.length)];
 
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-
-    await interaction.reply({
-      embeds: [
-        {
-          title: "AirForceProud95 Quotes",
-          description: '"'+randomQuote+'"',
-          color: 0x3498db,
-          footer: {
-            text: "Developed by ChatGPT as a Stress Test with too much human interaction",
-            icon_url:
-              "https://yt3.googleusercontent.com/ytc/AIf8zZSlLc93SjTAF7g1NsvVsHLSIqk4VOMJ6LHHPTUtWw=s176-c-k-c0x00ffffff-no-rj",
-          },
-        },
-      ],
-      components: [
-        {
-          type: 1, 
-          components: [
-            {
-              type: 2, 
-              style: 5, 
-              label: "Watch his videos",
-              url: "https://www.youtube.com/@Airforceproud95", 
+      await interaction.reply({
+        embeds: [
+          {
+            title: "AirForceProud95 Quotes",
+            description: '"' + randomQuote + '"',
+            color: 0x3498db,
+            footer: {
+              text: randomFooter,
+              icon_url:
+                "https://yt3.googleusercontent.com/ytc/AIf8zZSlLc93SjTAF7g1NsvVsHLSIqk4VOMJ6LHHPTUtWw=s176-c-k-c0x00ffffff-no-rj",
             },
-          ],
-        },
-      ],
-    });
+          },
+        ],
+        components: [
+          {
+            type: 1,
+            components: [
+              {
+                type: 2,
+                style: 5,
+                label: "Watch his videos",
+                url: "https://www.youtube.com/@Airforceproud95",
+              },
+            ],
+          },
+        ],
+      });
+    } catch (error) {
+      console.error("Error handling command:", error);
+      await interaction.reply({ content: "There was an error while executing this command.", ephemeral: true });
+    }
   }
 });
-
-const token = process.env.DISCORD_TOKEN;
+const token = process.env.TOKEN;
 client.login(token);
