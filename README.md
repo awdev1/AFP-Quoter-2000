@@ -1,6 +1,6 @@
 
 # AirForceProud95 Quotes Discord Bot
-NOTE: This an official AFP95 bot. This bot is fan-made. <br>
+NOTE: This not a official AFP95 bot. This bot is fan-made. <br>
 
 
 ## Introduction
