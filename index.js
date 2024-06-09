@@ -50,8 +50,6 @@ const quotes = [
 ];
 
 const footer = [
- "Thanks Beani",
- "Thanks Beani for helping",
  "You got this",
  "You matter in this world",
  "Don't Give Up.",
