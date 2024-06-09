@@ -32,3 +32,4 @@ Use the bot file `index.js`, scroll down to the quotes , and edit them to your l
 - Get a random quote: <br>
   
 ![Example](Example.PNG)
+## All Rights Reserved awdev
